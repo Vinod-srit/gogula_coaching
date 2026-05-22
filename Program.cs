@@ -27,9 +27,9 @@ app.MapPost("/saveStudent", async (HttpContext context) =>
         con.Open();
 
         string query = @"insert into students
-        (fname,lname,year_of_passout,mobile_number,graduation,address,reference)
+        (fname,lname,year_of_passout,course,mobile_number,graduation,address,reference)
         values
-        (@fname,@lname,@year_of_passout,@mobile_number,@graduation,@address,@reference)";
+        (@fname,@lname,@year_of_passout,@course,@mobile_number,@graduation,@address,@reference)";
 
         MySqlCommand cmd = new MySqlCommand(query, con);
 
