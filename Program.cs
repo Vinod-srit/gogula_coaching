@@ -7,7 +7,8 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-string connectionString = "server=localhost;database=coachingcenter;user=root;password=Vinod@2002;";
+string connectionString =
+    "server=localhost;database=coachingcenter;user=root;password=vinod@2002;";
 
 app.MapPost("/saveStudent", async (HttpContext context) =>
 {
@@ -22,30 +23,46 @@ app.MapPost("/saveStudent", async (HttpContext context) =>
     string address = form["address"].ToString();
     string reference = form["reference"].ToString();
 
-    using (MySqlConnection con = new MySqlConnection(connectionString))
+    try
     {
-        con.Open();
+        using (MySqlConnection con = new MySqlConnection(connectionString))
+        {
+            con.Open();
 
-        string query = @"insert into students
-        (fname,lname,year_of_passout,mobile_number,graduation,course,address,reference)
-        values
-        (@fname,@lname,@year_of_passout,@mobile_number,@graduation,@course,@address,@reference)";
+            string query = @"INSERT INTO students
+            (fname, lname, year_of_passout, mobile_number,
+             graduation, course, address, reference)
+             
+             VALUES
+            (@fname, @lname, @year_of_passout, @mobile_number,
+             @graduation, @course, @address, @reference)";
 
-        MySqlCommand cmd = new MySqlCommand(query, con);
+            MySqlCommand cmd = new MySqlCommand(query, con);
 
-        cmd.Parameters.AddWithValue("@fname", fname);
-        cmd.Parameters.AddWithValue("@lname", lname);
-        cmd.Parameters.AddWithValue("@year_of_passout", year_of_passout);
-        cmd.Parameters.AddWithValue("@mobile_number", mobile_number);
-        cmd.Parameters.AddWithValue("@graduation", graduation);
-         cmd.Parameters.AddWithValue("@course",course);
-        cmd.Parameters.AddWithValue("@address", address);
-        cmd.Parameters.AddWithValue("@reference", reference);
+            cmd.Parameters.AddWithValue("@fname", fname);
+            cmd.Parameters.AddWithValue("@lname", lname);
+            cmd.Parameters.AddWithValue("@year_of_passout", year_of_passout);
+            cmd.Parameters.AddWithValue("@mobile_number", mobile_number);
+            cmd.Parameters.AddWithValue("@graduation", graduation);
+            cmd.Parameters.AddWithValue("@course", course);
+            cmd.Parameters.AddWithValue("@address", address);
+            cmd.Parameters.AddWithValue("@reference", reference);
 
-        cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
+
+        await context.Response.WriteAsync(@"
+        <script>
+            alert('Student Registered Successfully');
+            window.location.href='/';
+        </script>");
     }
-
-    context.Response.Redirect("/");
+    catch (Exception ex)
+    {
+        await context.Response.WriteAsync("Database Error : " + ex.Message);
+    }
 });
 
 app.Run();

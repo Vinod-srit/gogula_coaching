@@ -33,6 +33,7 @@ C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.c
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.RazorAssemblyInfo.cache
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.RazorAssemblyInfo.cs
+C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.sourcelink.json
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -114,4 +115,3 @@ C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\refint\Gogula_Coa
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.pdb
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.genruntimeconfig.cache
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\ref\Gogula_Coaching.dll
-C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.sourcelink.json

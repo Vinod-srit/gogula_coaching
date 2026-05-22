@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gogula_Coaching")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+065d69775ffc1220c63dff3762e6a065447e925a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ddd0c2a55f9a59ec54ff02801c7de746da0309e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gogula_Coaching")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gogula_Coaching")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
