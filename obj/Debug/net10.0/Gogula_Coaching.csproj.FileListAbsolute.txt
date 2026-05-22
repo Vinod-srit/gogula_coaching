@@ -114,6 +114,4 @@ C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\refint\Gogula_Coa
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.pdb
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.genruntimeconfig.cache
 C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\ref\Gogula_Coaching.dll
-C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\compressed\fl60gb6txt-{0}-5ipweew5fc-5ipweew5fc.gz
-C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\compressed\kpyfzi9nmh-{0}-ik0zwog12h-ik0zwog12h.gz
-C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\compressed\piro6hexps-{0}-har07fw3ny-har07fw3ny.gz
+C:\Users\VINOD KUMAR\Desktop\Gogula_Coaching\obj\Debug\net10.0\Gogula_Coaching.sourcelink.json

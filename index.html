@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-    <title>Student Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GOGULA COACHING</title>
 
     <style>
 
@@ -11,32 +14,63 @@
             margin:0;
             padding:0;
             box-sizing:border-box;
-            font-family:Arial;
+            font-family:'Poppins',sans-serif;
         }
 
         body{
-            background:linear-gradient(to right,#4facfe,#00f2fe);
+            background:linear-gradient(135deg,#00c6ff,#0072ff);
             min-height:100vh;
+            overflow-x:hidden;
+            position:relative;
         }
+
+        /* Floating Circles */
+
+        .circle{
+            position:absolute;
+            border-radius:50%;
+            background:rgba(255,255,255,0.2);
+            animation:move 10s linear infinite;
+        }
+
+        .circle1{
+            width:200px;
+            height:200px;
+            top:100px;
+            left:50px;
+        }
+
+        .circle2{
+            width:150px;
+            height:150px;
+            bottom:100px;
+            right:50px;
+        }
+
+        /* Navbar */
 
         nav{
             width:100%;
-            height:70px;
-            background:white;
+            height:80px;
+            background:rgba(255,255,255,0.15);
+            backdrop-filter:blur(10px);
             display:flex;
             justify-content:space-between;
             align-items:center;
-            padding:0 50px;
-            box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+            padding:0 60px;
             position:fixed;
             top:0;
             left:0;
+            z-index:1000;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
         }
 
         .logo{
-            font-size:28px;
+            font-size:30px;
             font-weight:bold;
-            color:blue;
+            color:white;
+            letter-spacing:2px;
+            animation:slideLeft 1s ease;
         }
 
         nav ul{
@@ -45,22 +79,26 @@
         }
 
         nav ul li{
-            margin-left:25px;
+            margin-left:30px;
         }
 
         nav ul li a{
             text-decoration:none;
-            color:black;
+            color:white;
             font-size:18px;
             font-weight:bold;
-            transition:0.3s;
+            transition:0.4s;
         }
 
         nav ul li a:hover{
-            color:blue;
+            color:yellow;
         }
 
+        /* Main */
+
         .main{
+            width:100%;
+            min-height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
@@ -68,18 +106,23 @@
             padding-bottom:40px;
         }
 
+        /* Container */
+
         .container{
             width:450px;
-            background:white;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0px 0px 15px rgba(0,0,0,0.3);
+            background:rgba(255,255,255,0.2);
+            backdrop-filter:blur(15px);
+            padding:35px;
+            border-radius:25px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            animation:floatBox 4s ease-in-out infinite;
         }
 
         h1{
             text-align:center;
+            color:white;
             margin-bottom:25px;
-            color:darkblue;
+            font-size:35px;
         }
 
         .input-group{
@@ -87,47 +130,115 @@
         }
 
         label{
-            font-weight:bold;
             display:block;
-            margin-bottom:6px;
+            margin-bottom:8px;
+            color:white;
+            font-weight:bold;
         }
 
         input,
         select,
         textarea{
             width:100%;
-            padding:12px;
-            border:1px solid #ccc;
-            border-radius:8px;
-            font-size:15px;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            outline:none;
+            font-size:16px;
+            transition:0.4s;
         }
 
         input:focus,
         select:focus,
         textarea:focus{
-            outline:none;
-            border:2px solid blue;
+            transform:scale(1.03);
+            box-shadow:0 0 15px #00f2fe;
         }
 
         textarea{
             resize:none;
-            height:80px;
+            height:90px;
         }
 
         button{
             width:100%;
-            padding:14px;
-            background:blue;
-            color:white;
+            padding:15px;
+            background:white;
+            color:#0072ff;
             border:none;
-            border-radius:8px;
-            font-size:18px;
+            border-radius:10px;
+            font-size:20px;
+            font-weight:bold;
             cursor:pointer;
-            transition:0.3s;
+            transition:0.4s;
         }
 
         button:hover{
-            background:darkblue;
+            background:yellow;
+            color:black;
+            transform:translateY(-5px);
+        }
+
+        /* Animations */
+
+        @keyframes slideLeft{
+
+            from{
+                opacity:0;
+                transform:translateX(-100px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateX(0);
+            }
+        }
+
+        @keyframes floatBox{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+            }
+        }
+
+        @keyframes move{
+
+            0%{
+                transform:translateY(0px) rotate(0deg);
+            }
+
+            100%{
+                transform:translateY(-1000px) rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px){
+
+            nav{
+                padding:0 20px;
+            }
+
+            .container{
+                width:90%;
+            }
+
+            nav ul li{
+                margin-left:15px;
+            }
+
+            nav ul li a{
+                font-size:15px;
+            }
         }
 
     </style>
@@ -136,6 +247,13 @@
 
 <body>
 
+    <!-- Floating Circles -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- Navbar -->
+
     <nav>
 
         <div class="logo">
@@ -143,15 +261,15 @@
         </div>
 
         <ul>
-
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Students</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="contact.html">Contact</a></li>
-
         </ul>
 
     </nav>
+
+    <!-- Main -->
 
     <div class="main">
 
@@ -159,32 +277,34 @@
 
             <h1>Student Registration</h1>
 
-            <form method="post" action="/saveStudent">
+            <form>
 
                 <div class="input-group">
                     <label>First Name</label>
-                    <input type="text" name="fname" placeholder="Enter First Name" required>
+                    <input type="text" placeholder="Enter First Name" required>
                 </div>
 
                 <div class="input-group">
                     <label>Last Name</label>
-                    <input type="text" name="lname" placeholder="Enter Last Name" required>
+                    <input type="text" placeholder="Enter Last Name" required>
                 </div>
 
                 <div class="input-group">
                     <label>Year Of Passout</label>
-                    <input type="number" name="year_of_passout" placeholder="Enter Passout Year" required>
+                    <input type="number" placeholder="Enter Passout Year" required>
                 </div>
 
-                 <div class="input-group">
-                    <label>course</label>
-                     <select name="course">
+                <div class="input-group">
 
-                        <option>Java-Full-Stack</option>
+                    <label>Course</label>
+
+                    <select>
+
+                        <option>Java Full Stack</option>
                         <option>Python Full Stack</option>
                         <option>.Net</option>
-                        <option>React Js</option>
                         <option>3rd to 10th Class</option>
+                        <option>React JS</option>
                         <option>Data Science</option>
 
                     </select>
@@ -192,15 +312,10 @@
                 </div>
 
                 <div class="input-group">
-                    <label>Mobile Number</label>
-                    <input type="text" name="mobile_number" placeholder="Enter Mobile Number" required>
-                </div>
-
-                <div class="input-group">
 
                     <label>Graduation</label>
 
-                    <select name="graduation">
+                    <select>
 
                         <option>B.Tech</option>
                         <option>B.Sc</option>
@@ -214,12 +329,12 @@
 
                 <div class="input-group">
                     <label>Address</label>
-                    <textarea name="address" placeholder="Enter Address"></textarea>
+                    <textarea placeholder="Enter Address"></textarea>
                 </div>
 
                 <div class="input-group">
                     <label>Reference</label>
-                    <input type="text" name="reference" placeholder="Enter Reference">
+                    <input type="text" placeholder="Enter Reference">
                 </div>
 
                 <button type="submit">
@@ -231,6 +346,30 @@
         </div>
 
     </div>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const button = document.querySelector("button");
+
+        button.addEventListener("click",(e)=>{
+
+            e.preventDefault();
+
+            button.innerHTML="Registering...";
+
+            setTimeout(()=>{
+
+                alert("Student Registered Successfully!");
+
+                button.innerHTML="Register Student";
+
+            },2000);
+
+        });
+
+    </script>
 
 </body>
 
