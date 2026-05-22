@@ -8,7 +8,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 string connectionString =
-    "server=localhost;database=coachingcenter;user=root;password=vinod@2002;";
+    "server=localhost;database=coachingcenter;user=root;password=Vinod@2002;";
 
 app.MapPost("/saveStudent", async (HttpContext context) =>
 {
