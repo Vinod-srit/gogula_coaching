@@ -16,9 +16,9 @@ app.MapPost("/saveStudent", async (HttpContext context) =>
     string fname = form["fname"].ToString();
     string lname = form["lname"].ToString();
     string year_of_passout = form["year_of_passout"].ToString();
-    string course = form["course"].ToString();
     string mobile_number = form["mobile_number"].ToString();
     string graduation = form["graduation"].ToString();
+    string course = form["course"].ToString();
     string address = form["address"].ToString();
     string reference = form["reference"].ToString();
 
@@ -27,18 +27,18 @@ app.MapPost("/saveStudent", async (HttpContext context) =>
         con.Open();
 
         string query = @"insert into students
-        (fname,lname,year_of_passout,course,mobile_number,graduation,address,reference)
+        (fname,lname,year_of_passout,mobile_number,graduation,course,address,reference)
         values
-        (@fname,@lname,@year_of_passout,@course,@mobile_number,@graduation,@address,@reference)";
+        (@fname,@lname,@year_of_passout,@mobile_number,@graduation,@course,@address,@reference)";
 
         MySqlCommand cmd = new MySqlCommand(query, con);
 
         cmd.Parameters.AddWithValue("@fname", fname);
         cmd.Parameters.AddWithValue("@lname", lname);
         cmd.Parameters.AddWithValue("@year_of_passout", year_of_passout);
-        cmd.Parameters.AddWithValue("@course",course);
         cmd.Parameters.AddWithValue("@mobile_number", mobile_number);
         cmd.Parameters.AddWithValue("@graduation", graduation);
+         cmd.Parameters.AddWithValue("@course",course);
         cmd.Parameters.AddWithValue("@address", address);
         cmd.Parameters.AddWithValue("@reference", reference);
 
